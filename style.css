@@ -38,3 +38,7 @@ body{
     
 }
 
+div .btn-card {
+    display: flex;
+    justify-content: right;
+}
