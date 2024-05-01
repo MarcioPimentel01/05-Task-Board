@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="modal fade" id="add-task" tabindex="-1" aria-labelledby="add-taskLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="add-taskLabel">Add Task</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" draggable="true">
+                    <label for="task-title">Task Title</label>
+                    <input type="text" name="task-title" class="form-control form-control-sm" placeholder="Please Type the Title of you task"> 
+                    <div>
+                        <label for="date" class="col-1 col-form-label">Date</label>
+                          <div class="col-5">
+                            <div class="input-group date" id="datepicker">
+                              <input type="date" class="form-control" id="date"/>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">Task Description</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+
+                <!-- Dinamic Text Goes Here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

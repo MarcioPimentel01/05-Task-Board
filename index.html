@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcio Pimentel Kanban</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+            <div id="task-board-logo">
+                <h1>Task Board</h1>
+                <h4><small class="text-body-secondary">A simple kanban board for task management.</small></h4>
+            </div>
+    
+            <div>
+            <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-success me-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Add Task
+                </button>
+                                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Task</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" draggable="true">
+                                <label for="task-title">Task Title</label>
+                                <input type="text" name="task-title" class="form-control form-control-sm" placeholder="Please Type the Title of you task"> 
+                                <div>
+                                    <label for="date" class="col-1 col-form-label">Date</label>
+                                      <div class="col-5">
+                                        <div class="input-group date" id="datepicker">
+                                          <input type="date" class="form-control" id="date"/>
+                                        </div>
+                                    </div>
+                                </div><br>
+                                <div class="mb-3">
+                                  <label for="exampleFormControlTextarea1" class="form-label">Task Description</label>
+                                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+
+                            <!-- Dinamic Text Goes Here -->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Add task</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+      
+      <div class="container">
+      <!-- TO DO -->
+        <div class="main-columns">
+            <p class="h1">TO DO</p>
+            <h4><small class="text-body-secondary">OK! You know what to do.</small></h4>
+                <div>
+
+            </div>
+        </div>
+        
+        
+        <!-- IN PROGRESS -->
+        <div class="main-columns">
+            <p class="h1">IN PROGRESS</p>
+            <h4><small class="text-body-secondary">Look at you! Taking care of things.</small></h4>
+        </div>
+
+    
+    <!-- DONE -->
+        <div class="main-columns">
+            <p class="h1">DONE</p>
+            <h4><small class="text-body-secondary">Greate Job! To the next task we go.</small></h4>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>
