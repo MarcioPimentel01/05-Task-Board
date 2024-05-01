@@ -33,7 +33,3 @@ function getTask () {
 }
 
 
-
-
-// // Event listener for "Save changes" button click
-// document.querySelector('#exampleModal .btn-primary').addEventListener('click', saveTaskToLocalStorage);

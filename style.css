@@ -1,4 +1,4 @@
-*{
+ *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -16,8 +16,15 @@ body{
 
 .container{
     display: flex;
-    justify-content: space-between;
-
+    justify-content: center;
+    
+    gap: 30px;
+    
+    padding: 25px;
+    
+    overflow: scroll;
+    height: 100%;
+    
 }
 
 .main-columns{
@@ -26,14 +33,8 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: blanchedalmond;
-
-
-
-    gap: 16px;
-
-    padding: 25px 34px;
-
-    overflow: scroll;
-    height: 100%;
+    border-radius: 8px;
+    width: 380px;
+    
 }
 
