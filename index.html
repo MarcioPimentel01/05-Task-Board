@@ -32,7 +32,7 @@
                                 <h1 class="modal-title fs-5" id="exampleModalLabel">Add Task</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="modal-body" draggable="true">
+                            <div class="modal-body">
                                 <label for="task-title">Task Title</label>
                                 <input type="text" name="task-title" class="form-control form-control-sm" placeholder="Please Type the Title of you task"> 
                                 <div>
@@ -48,7 +48,6 @@
                                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                 </div>
 
-                            <!-- Dinamic Text Goes Here -->
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" id="btn-close" data-bs-dismiss="modal">Add Task</button>
@@ -59,58 +58,43 @@
             </div>
         </div>
     </nav>
+
+    <!-- Modal end -->
       
     <!-- TO DO -->
     <div class="container">
         <div class="main-columns">
             <p class="h1">TO DO</p>
             <h4><small class="text-body-secondary">OK! You know what to do.</small></h4>
-            <div id="create-task-card">
-                <div class="card text-bg-primary mb-3" id="draggableDiv" draggable="true" style="max-width: 22rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                      <h5 class="card-title">Primary card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <div class="btn-card"><button type="button" class="btn btn-light">Delete Task</button></div>
-                    </div>
-                </div>
+            <div class="create-task-card">
+
             </div>
         </div>
-    
-
+        
+        
         
         
         
         <!-- IN PROGRESS -->
         <div class="main-columns">
-               <p class="h1">IN PROGRESS</p>
-                <h4><small class="text-body-secondary">Look at you! Taking care of things.</small></h4>
-                <section>
-                    <div class="card text-bg-primary mb-3" class="draggableDiv" draggable="true" style="max-width: 22rem;">
-                        <div class="card-header">Header</div>
-                        <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <div class="btn-card"><button type="button" class="btn btn-light">Delete Task</button></div>
-                        </div>
-                    </div>
-                </section>
+            <p class="h1">IN PROGRESS</p>
+            <h4><small class="text-body-secondary">Look at you! Taking care of things.</small></h4>
+            <div class="create-task-card">
+                
+            </div>
+            
         </div>
         
-
-    
+        
+        
         <!-- DONE -->
         <div class="main-columns">
             <p class="h1">DONE</p>
             <h4><small class="text-body-secondary">Greate Job! To the next task we go.</small></h4>
-            <div class="card text-bg-primary mb-3" id="draggableDiv" draggable="true" style="max-width: 22rem;">
-                <div class="card-header">Header</div>
-                <div class="card-body">
-                  <h5 class="card-title">Primary card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <div class="btn-card"><button type="button" class="btn btn-light">Delete</button></div>
-                </div>
+            <div class="create-task-card">
+            
             </div>
+            
         </div>
     </div>
    
@@ -127,10 +111,10 @@
 
 
 
-    <script src="./script.js"></script>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
+    <script src="./script.js"></script>
 </body>
 </html>
