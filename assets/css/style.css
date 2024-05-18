@@ -1,0 +1,28 @@
+
+#navbar{
+    background-color: rgb(37, 32, 138);
+    color: whitesmoke;
+}
+
+.container{
+    background-color: #e0e0e0;
+    background-size: cover;
+    border-radius: 14px;
+    background: #e0e0e0;
+    box-shadow:  -38px 38px 76px #bebebe,
+                38px -10px 20px #ffffff;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left-width: 10px;
+
+    width: 1440px;
+}
+
+.btn-success{
+    margin-top: 10px;
+}
+
+.card{
+    
+}
