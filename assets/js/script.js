@@ -7,8 +7,14 @@ const id = []
 const tasks = []
 const tasksPlusId = []
 
-_btnClose.addEventListener(`click`, (event) => {
-    console.log(`Add Task Modal Closed`);
+generateUniqueId()
+function generateUniqueId() {
+    const uniqueId = Math.floor(Math.random() * 1000);
+    id.unshift(uniqueId);
+    getModalData();
+}
+
+function getModalData(event) {
     event.preventDefault();
     const taskTitle = document.querySelector('#exampleModal input[name="task-title"]').value;
     const taskDate = document.querySelector('#exampleModal input[type="date"]').value;
@@ -17,22 +23,11 @@ _btnClose.addEventListener(`click`, (event) => {
     const task = {
         title: taskTitle,
         date: taskDate,
-        description: taskDescription
+        description: taskDescription,
+        id: id[0]
     };
-
-    tasks.unshift(task);
-    localStorage.setItem('taskCards', JSON.stringify(tasks));
-});
-
-
-generateUniqueId();
-
-
-
-function generateUniqueId() {
-    const uniqueId = Math.floor(Math.random() * 1000);
-    id.unshift(uniqueId);
-    createTaskCards();
+    task.unshift(task);
+    localStorage.setItem('taskCards', JSON.stringify(task));
 }
 
 function createTaskCards() {
