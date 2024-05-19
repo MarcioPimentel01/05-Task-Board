@@ -1,61 +1,62 @@
-let taskList = JSON.parse(localStorage.getItem("tasks"));
-let nextId = JSON.parse(localStorage.getItem("nextId"));
+const _deleteButtons = document.querySelectorAll('.btn-card button');
+const _btnClose = document.getElementById('btn-close')
+const _cards = document.getElementById('todo-cards');
+const _dynamicCards = document.querySelectorAll('.card');
+
+const id = []
+const tasks = []
+const tasksPlusId = []
+
+_btnClose.addEventListener(`click`, (event) => {
+    console.log(`Add Task Modal Closed`);
+    event.preventDefault();
+    const taskTitle = document.querySelector('#exampleModal input[name="task-title"]').value;
+    const taskDate = document.querySelector('#exampleModal input[type="date"]').value;
+    const taskDescription = document.querySelector('#exampleModal textarea').value;
+    
+    const task = {
+        title: taskTitle,
+        date: taskDate,
+        description: taskDescription
+    };
+
+    tasks.unshift(task);
+    localStorage.setItem('taskCards', JSON.stringify(tasks));
+});
+
+
+generateUniqueId();
 
 
 
-let id = []
 function generateUniqueId() {
     const uniqueId = Math.floor(Math.random() * 1000);
     id.unshift(uniqueId);
-    createTaskCard();
+    createTaskCards();
 }
 
-function createTaskCard () {
-    try {
-        const _card = document.getElementById(`card`);
-        if (!_card) {
-            throw new Error('createTaskCard: document.getElementById("card") returns null');
-        }
+function createTaskCards() {
+    const taskCards = JSON.parse(localStorage.getItem('taskCards')) || [];
+    tasksPlusId.unshift(...taskCards.map(task => ({ ...task, id: id[0] })));
+    
+    _cards.innerHTML = '';
 
-        const cardList = JSON.parse(localStorage.getItem(`card`)) || [];
-        if (!Array.isArray(cardList)) {
-            throw new Error('createTaskCard: localStorage.getItem("card") does not return an array');
-        }
+    tasksPlusId.forEach((task) => {
+        const taskCardContainer = document.createElement('div');
+        taskCardContainer.classList.add('card');
+        taskCardContainer.draggable = true;
 
-        id.forEach(cardId => {
-            const createCard = document.createElement(`div`);
-            createCard.classList.add(`card-body`);
-            createCard.classList.add('draggableDiv');
-            createCard.setAttribute(`draggable`, 'true');
-            createCard.id = cardId;
-
-            createCard.innerHTML = `
-            <div class="card text-bg-primary mb-3 draggableDiv" draggable="true" style="max-width: 22rem;">
-            <div class="card-header">header</div>
+        taskCardContainer.innerHTML = `
+        <div class="card text-bg-primary mb-3 draggableDiv" id="${task.id}" style="max-width: 24rem;">
+            <div class="card-header">${task.date}</div>
                 <div class="card-body">
-                <h5 class="card-title">title</h5>
-                    <p class="card-text">task description</p>
-                <div class="btn-card"><button type="button" class="btn btn-light">Delete Task</button></div>
+                    <h5 class="card-title">${task.title}</h5>
+                    <p class="card-text">${task.description}</p>
+                <div><button type="button" class="btn btn-light">Delete Task</button></div>
             </div>
-        </div>`;
-
-            _card.appendChild(createCard);
-        });
-    } catch (error) {
-        console.error(error.message);
-        console.error(error.stack);
+        </div>`
+        
+        _cards.appendChild(taskCardContainer);
     }
-}
-
-// todo renderTaskList function
-//? create a function to render the task list and make cards draggable
-
-// todo handleAddTask function
-//? create a function to handle adding a new task
-
-// todo handleDeleteTask function
-//? create a function to handle deleting a task
-
-// todo handleDrop function
-//? create a function to handle dropping a task into a new status lane
+)}
 

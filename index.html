@@ -49,7 +49,6 @@
                             <label for="exampleFormControlTextarea1" class="form-label">Task Description</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
-
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" id="btn-close" data-bs-dismiss="modal">Add Task</button>
@@ -59,40 +58,46 @@
         </div>
 
 
-    <!-- Todo: Create a modal with a form to add tasks -->
+            <!-- !TO DO LANE -->
     <div class="row swim-lanes text-center justify-content-between">
         <div class="col- col-lg-4 d-flex">
             <div   div id="to-do" class="card border-light mb-3 lane flex-grow-1">
                 <div   div class="card-header bg-white">
-                    <h2 class="card-title mb-1">To Do</h2>
+                    <h2 class="card-title mb-2">To Do</h2>
                 </div>
                 <div class="card-body bg-light">
-                    <div id="todo-cards"></div>
+                    <div id="todo-cards"> 
+                        <!-- !dynamically Add tasks here --> 
+                    </div>
                 </div>
             </div>
         </div>
-
-
+        
+        <!-- !IN PROGRESS LANE -->
         <div class="col-12 col-lg-4 d-flex">
             <div id="in-progress" class="card border-light mb-3 lane flex-grow-1">
                 <div class="card-header bg-white">
                     <h2 class="card-title mb-1">In Progress</h2>
                 </div>
                 <div class="card-body bg-light">
-                    <div id="in-progress-cards"></div>
+                    <div id="in-progress-cards">
+                        <!-- !dynamically Add tasks here -->
+                    </div>
                 </div>
             </div>
         </div>
-
-
+        
+        <!-- !DONE LANE -->
         <div class="col-12 col-lg-4 d-flex">
             <div id="done" class="card border-light mb-3 lane flex-grow-1">
                 <div class="card-header bg-white">
                     <h2 class="card-title mb-1">Done</h2>
                 </div>
-                    <div class="card-body bg-light">
-                        <div id="done-cards"></div>
+                <div class="card-body bg-light">
+                    <div id="done-cards">
+                        <!-- !dynamically Add tasks here -->
                     </div>
+                </div>
             </div>
         </div>
     </div>
